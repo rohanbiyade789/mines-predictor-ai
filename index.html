@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🔒 Mines Predictor Access – YTRYRH PRO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0e0f12;
+      color: #fff;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    h1 {
+      color: #00ffc3;
+      text-shadow: 0 0 10px #00ffc3;
+      margin-top: 20px;
+    }
+    .hidden { display: none; }
+    .section {
+      padding: 20px;
+    }
+    .plan-box {
+      border: 1px solid #00e6ac;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 400px;
+      background-color: #131313;
+      box-shadow: 0 0 10px #00ffc3;
+    }
+    .price {
+      font-size: 24px;
+      color: #2ecc71;
+      font-weight: bold;
+    }
+    .upi-box {
+      background: #000;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 420px;
+      font-size: 20px;
+      border-radius: 10px;
+      border: 2px solid #00ffc3;
+      color: #00ffc3;
+      font-weight: bold;
+    }
+    .apps a {
+      display: block;
+      margin: 10px;
+      font-size: 18px;
+      color: #00aaff;
+      text-decoration: none;
+    }
+    .apps a:hover { text-decoration: underline; }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      background: linear-gradient(135deg, #00ffc3, #2effa8);
+      color: #000;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffc3;
+      cursor: pointer;
+    }
+    .grid-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 60px);
+      gap: 10px;
+    }
+    .cell {
+      width: 60px;
+      height: 60px;
+      background: #1f2227;
+      border: 2px solid #2a2a2a;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .cell.revealed.safe {
+      background: #00e6ff;
+      color: #000;
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #00e6ff;
+      border-color: #00d0cc;
+    }
+    .cell.revealed.mine {
+      background: #e74c3c;
+      color: #fff;
+      transform: scale(1.1);
+      animation: glowRed 1s infinite alternate;
+      border-color: #c0392b;
+    }
+    @keyframes glowRed {
+      from { box-shadow: 0 0 10px #e74c3c; }
+      to   { box-shadow: 0 0 20px #ff5e5e; }
+    }
+    .row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    input, select {
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+    }
+    footer {
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    footer a {
+      color: #00e6ac;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="page1" class="section">
+    <h1>🚀 Buy Access – Mines Predictor</h1>
+    <div class="plan-box"><h3>🔹 1 Day Access</h3><div class="price">₹350</div></div>
+    <div class="plan-box"><h3>🔷 30 Days Access</h3><div class="price">₹1500</div></div>
+    <div class="plan-box"><h3>💎 Unlimited Access</h3><div class="price">₹3500</div></div>
+    <h3>💰 Pay via UPI</h3>
+    <div class="upi-box">rohanbiyade0@oksbi</div>
+    <div class="apps">
+      <a href="upi://pay?pa=rohanbiyade0@oksbi&am=350&cu=INR">📲 Pay with GPay</a>
+      <a href="upi://pay?pa=rohanbiyade0@oksbi&am=350&cu=INR">📲 Pay with PhonePe</a>
+      <a href="upi://pay?pa=rohanbiyade0@oksbi&am=350&cu=INR">📲 Pay with Paytm</a>
+    </div>
+    <p>🧠 After payment, message us for the password:</p>
+    <p style="color:#00e6ac;">🔐 Telegram: <a href="https://t.me/indiaprohack">@indiaprohack</a></p>
+    <button onclick="checkAccess()">✅ I’ve Paid – Enter Password</button>
+    <footer><p>📩 Need help? <a href="https://t.me/+c7FE1mUjxfVhZmI1" target="_blank">Join Telegram Support</a></p></footer>
+  </div>
+  <div id="page2" class="section hidden">
+    <h1>YTRYRH PRO – Mines + ATLXS Phonk</h1>
+    <div class="row">
+      <input type="text" id="clientSeed" placeholder="Client Seed (optional)">
+      <select id="minesSelect">
+        <option value="1">1 into 24</option>
+        <option value="2">2 into 23</option>
+        <option value="3">3 into 22</option>
+        <option value="5">5 into 20</option>
+        <option value="10">10 into 15</option>
+        <option value="15">15 into 10</option>
+        <option value="20">20 into 5</option>
+        <option value="24">24 into 1</option>
+      </select>
+    </div>
+    <div class="row">
+      <button onclick="generateBoard()">🎯 Start Prediction</button>
+      <button onclick="resetBoard()">🔄 Reset</button>
+    </div>
+    <div class="row">
+      <button onclick="playMusic()">▶️ Play Phonk</button>
+      <button onclick="stopMusic()">⏹️ Stop Phonk</button>
+    </div>
+    <div class="grid-container"><div class="grid" id="grid"></div></div>
+    <footer>💬 <a href="https://t.me/+c7FE1mUjxfVhZmI1" target="_blank">Support on Telegram</a></footer>
+  </div>
+  <audio id="bgMusic" loop preload="auto" src="https://loadedmedia.store/uploads/music/2025/03/ATLXS-PASSO-BEM-SOLTO-Super-Slowed-.mp3"></audio>
+  <script>
+    const page1 = document.getElementById('page1');
+    const page2 = document.getElementById('page2');
+    const grid = document.getElementById('grid');
+    const music = document.getElementById('bgMusic');
+    function checkAccess() {
+      const pwd = prompt("Enter access code:");
+      if (pwd === "YTRYRH@789789@PRO2025") {
+        page1.classList.add('hidden');
+        page2.classList.remove('hidden');
+        createGrid();
+      } else {
+        alert("❌ Wrong password. Contact @indiaprohack");
+      }
+    }
+    function playMusic() {
+      music.play().catch(()=>alert("Tap screen or start button to enable music"));
+    }
+    function stopMusic() {
+      music.pause(); music.currentTime = 0;
+    }
+    function createGrid() {
+      grid.innerHTML = '';
+      for (let i = 0; i < 25; i++) {
+        let c = document.createElement('div');
+        c.className = 'cell'; c.dataset.index = i;
+        grid.appendChild(c);
+      }
+    }
+    function hashSeed(s) {
+      let h = 0;
+      for (let ch of s) h = (h << 5) - h + ch.charCodeAt(0), h |= 0;
+      return Math.abs(h);
+    }
+    function generateBoard() {
+      const mc = parseInt(document.getElementById('minesSelect').value);
+      const seed = hashSeed((document.getElementById('clientSeed').value || Math.random()) + Date.now());
+      const mines = new Set();
+      for (let i = 0; mines.size < mc && i < 1000; i++) {
+        mines.add(Math.abs(Math.floor(Math.sin(seed + i) * 10000)) % 25);
+      }
+      grid.querySelectorAll('.cell').forEach((c, i) => {
+        c.classList.remove('revealed', 'mine', 'safe');
+        c.textContent = '';
+        setTimeout(() => {
+          const is = mines.has(i);
+          c.classList.add('revealed', is ? 'mine' : 'safe');
+          c.textContent = is ? '💣' : '💎';
+        }, 100);
+      });
+    }
+    function resetBoard() {
+      grid.querySelectorAll('.cell').forEach(c => {
+        c.classList.remove('revealed', 'mine', 'safe');
+        c.textContent = '';
+      });
+    }
+  </script>
+</body>
+</html>
